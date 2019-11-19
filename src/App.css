@@ -1,0 +1,22 @@
+.menulink{
+  color: black;
+  font-size:18px;
+  margin-top:6px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration:none;
+  font-weight : 600
+}
+.menulink:hover, .menulink:active {
+color: #ff5e14;
+}
+.title {
+  color: white;
+  font-size:25px;
+  margin-top:6px;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration:none;
+  font-weight : 700;
+}
+.title:hover {
+  font-size : 27px;
+}
