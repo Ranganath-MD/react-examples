@@ -8,8 +8,9 @@ import PropTypes from 'prop-types';
 import { withStyles, withTheme} from '@material-ui/core/styles';
 import logo from "./logo.svg"
 import { Link, Route, Switch } from "react-router-dom"
-import DropeeDown from "../src/DropeeDown/DropeeDown"
+import DropeeDown from "./DropeeDown/DropeeDown"
 import Home from "../src/Home/Home"
+import DataOnCheck from "./DataOnCheck/DataOnCheck"
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -143,6 +144,7 @@ class Navigation extends React.Component{
         <Divider />
         <List className={classes.listitems}>
         <Link to="/dropee-down" className="menulink"><ListItem key={1} button>  Dropee Down</ListItem></Link>
+        <Link to="/get-data-on-check" className="menulink"><ListItem key={2} button>Get data on Check</ListItem></Link>
         </List>
       </Drawer>
       <main
@@ -153,6 +155,7 @@ class Navigation extends React.Component{
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/dropee-down" component={DropeeDown} exact />
+        <Route path="/get-data-on-check" component={DataOnCheck} exact />
       </Switch>
       </main>
     </div>
