@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { withStyles} from '@material-ui/core/styles';
-import {Grid, Button, Typography} from '@material-ui/core';
+import {Grid, Button, Typography, List, ListItem, Link} from '@material-ui/core';
 import Select from 'react-select';
 import axios from "axios"
 import { Modal } from 'react-bootstrap'
@@ -135,6 +135,29 @@ class DropeeDown extends Component {
                 </Modal>
                 <Grid container spacing={3}>
                     <Grid item xs>
+                        <List className="info-list">
+                            <ListItem>
+                                <Typography>Get the users name in users dropdown using<br/>
+                                <Link href="http://jsonplaceholder.typicode.com/users" target="_blank">
+                                    http://jsonplaceholder.typicode.com/users
+                                </Link></Typography>
+                            </ListItem>
+                            <ListItem>
+                                <Typography>
+                                Get the posts based on particular user name in post dropdown using<br/>
+                                <Link href="http://jsonplaceholder.typicode.com/posts" target="_blank">
+                                    http://jsonplaceholder.typicode.com/posts
+                                </Link></Typography>
+                            </ListItem>
+                            <ListItem>
+                                <Typography>
+                                Get the comments for particular post in comment dropdown using<br/>
+                                <Link href="http://jsonplaceholder.typicode.com/comments" target="_blank">
+                                    http://jsonplaceholder.typicode.com/comments
+                                </Link></Typography>
+                            </ListItem>
+                            <ListItem><Typography>Then print all the data from the dropdown in card layout</Typography></ListItem>
+                        </List>
                     </Grid>
                     <Grid item xs={12} sm={8} md={4} lg={4} >
                         <Typography>USERS:</Typography>

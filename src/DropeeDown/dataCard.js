@@ -3,7 +3,7 @@ import Card from '@material-ui/core/Card';
 import PropTypes from 'prop-types';
 import { withStyles} from '@material-ui/core/styles';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import {CardContent, CardActions, Button} from '@material-ui/core';
+import {CardContent} from '@material-ui/core';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 // import { Container } from './styles';
