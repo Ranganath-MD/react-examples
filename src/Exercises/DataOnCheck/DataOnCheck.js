@@ -1,20 +1,19 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { withStyles} from '@material-ui/core/styles';
-import {Grid, Paper, Table, TableBody, TableCell, TableHead, TableRow, Checkbox, List, ListItem} from '@material-ui/core';
+import {Grid, Paper, Table, TableBody, TableCell, TableHead, TableRow, Checkbox, List, ListItem, Typography} from '@material-ui/core';
 import axios from "axios"
-import { textAlign } from '@material-ui/system';
 const styles = {
     root: {
         flexGrow: 1,
     },
     paper : {
-        width: '80%',
-        overflowX: 'auto',
+        width: '100%',
+        // overflowX: 'auto',
     },
     row : {
         height : 10,
-        padding:"1px"
+        padding:0
     },
     list : {
         padding : 1
@@ -25,6 +24,20 @@ const styles = {
         fontWeight: "bold",
         color : "#42046B",
         textAlign : "center"
+    },
+    quest : {
+        fontSize: 20,
+        fontWeight : 600
+    },
+    ans : {
+        fontSize: 18,
+        fontWeight : 300
+    },
+    count : {
+        textAlign : "center",
+        fontSize: 20,
+        fontFamily:"monospace",
+        fontWeight : 500
     },
     head : {
         fontFamily : "monospace",
@@ -66,7 +79,8 @@ class DataOnCheck extends Component {
             <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs>
-
+                    <Typography className={classes.quest}>What is the problem Statement?</Typography>
+                    <Typography className={classes.ans}>Once you check the user, you should get the posts of particular user and if you uncheck, the posts from the particular user gets removed</Typography>
               </Grid>
               <Grid item xs>
                 <Paper className={classes.paper} >
@@ -106,7 +120,9 @@ class DataOnCheck extends Component {
                 </Paper>
               </Grid>
               <Grid item xs>
-                <Paper className={classes.paper} >
+                <Typography className={classes.count}>Number of posts - {this.state.posts.length}</Typography>
+                <Paper className={classes.paperpost} >
+
                     {
                         this.state.posts.map(post => {
                             return (
@@ -130,4 +146,4 @@ DataOnCheck.propTypes = {
     classes: PropTypes.object.isRequired,
   };
 
-  export default withStyles(styles)(DataOnCheck)
+export default withStyles(styles)(DataOnCheck)

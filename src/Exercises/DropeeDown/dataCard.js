@@ -7,7 +7,7 @@ import {CardContent} from '@material-ui/core';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 // import { Container } from './styles';
-import avatar from "../resources/images/avatarImage.jpg"
+import avatar from "../../resources/images/avatarImage.jpg"
 
 
 const styles = ({
