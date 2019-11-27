@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { withStyles} from '@material-ui/core/styles';
-import {List, ListItem, Paper} from '@material-ui/core';
+import {List, ListItem} from '@material-ui/core';
 
 const styles = theme => ({
     name : {
@@ -31,7 +31,7 @@ class TodoList extends Component {
         return (
             <div className={classes.head}>
                 {
-                    todos.length == 0 ? <span className={classes.emptyText}>No todo list yet, Add todos</span> :
+                    todos.length === 0 ? <span className={classes.emptyText}>No todo list yet, Add todos</span> :
                     todos.map(todo => {
                             return (
                                 <List >

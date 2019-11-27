@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { withStyles} from '@material-ui/core/styles';
-import {Grid, Paper, Typography, Button, Input, Link, TextField, RadioGroup, FormControlLabel} from '@material-ui/core';
+import {Grid, Typography, Button, Input} from '@material-ui/core';
 import SaveIcon from '@material-ui/icons/Save';
 import TodoList from './TodoList'
 
@@ -49,9 +49,9 @@ class AddTodo extends Component {
         return (
             <div>
                 <Grid container spacing={3}>
-                    <Grid item xs={4}>
+                    <Grid item xs={1}>
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={4}>
                         <Typography className={classes.title}>Add Todo </Typography>
                         <form onSubmit={this.handleSubmit}>
                             <Input
@@ -81,8 +81,10 @@ class AddTodo extends Component {
                             </Button>
                         </form>
                     </Grid>
-                    <Grid item xs={5}>
+                    <Grid item xs={4}>
                         <TodoList todos = {this.state.todos} />
+                    </Grid>
+                    <Grid item xs={3}>
                     </Grid>
                 </Grid>
             </div>
