@@ -14,6 +14,7 @@ import Home from "./Home/Home"
 import DataOnCheck from "./Exercises/DataOnCheck/DataOnCheck"
 import Radiofy from "./Exercises/Radiofy/Radiofy"
 import AddTodo from "./Exercises/AddTodo/AddTodo"
+import EmojiList from "./Exercises/SearchEmoji/emojiList"
 
 const drawerWidth = 240;
 
@@ -151,6 +152,7 @@ class Navigation extends React.Component{
         <Link to="/get-data-on-check" className="menulink"><ListItem key={2} button>Get data on Check</ListItem></Link>
         <Link to="/get-data-on-radio-check" className="menulink"><ListItem key={3} button>Radiofy</ListItem></Link>
         <Link to="/add-todo" className="menulink"><ListItem key={4} button>Add Todos</ListItem></Link>
+        <Link to="/emoji-list" className="menulink"><ListItem key={5} button>Search an Emoji</ListItem></Link>
         </List>
       </Drawer>
       <main
@@ -164,6 +166,7 @@ class Navigation extends React.Component{
         <Route path="/get-data-on-check" component={DataOnCheck} exact />
         <Route path="/get-data-on-radio-check" component={Radiofy} exact />
         <Route path="/add-todo" component={AddTodo} exact />
+        <Route path="/emoji-list" component={EmojiList} exact />
       </Switch>
       </main>
     </div>

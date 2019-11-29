@@ -78,11 +78,11 @@ class DataOnCheck extends Component {
         return (
             <div className={classes.root}>
             <Grid container spacing={3}>
-                <Grid item xs>
+                <Grid item xs={12} sm={8} md={4} lg={4}>
                     <Typography className={classes.quest}>What is the problem Statement?</Typography>
                     <Typography className={classes.ans}>Once you check the user, you should get the posts of particular user and if you uncheck, the posts from the particular user gets removed</Typography>
               </Grid>
-              <Grid item xs>
+              <Grid item xs={12} sm={8} md={4} lg={4}>
                 <Paper className={classes.paper} >
                     <Table aria-label="simple table">
                         <TableHead >
@@ -119,7 +119,7 @@ class DataOnCheck extends Component {
                     </Table>
                 </Paper>
               </Grid>
-              <Grid item xs>
+              <Grid item xs={12} sm={8} md={4} lg={4}>
                 <Typography className={classes.count}>Number of posts - {this.state.posts.length}</Typography>
                 <Paper className={classes.paperpost} >
 

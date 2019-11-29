@@ -65,13 +65,13 @@ class Radiofy extends Component {
         return (
             <div>
                 <Grid container spacing={3}>
-                    <Grid item xs>
+                    <Grid item xs={12} sm={8} md={4} lg={4}>
                         <Typography className={classes.info}>Select the User from the dropdown, You will get users Todo list based on the Status</Typography>
                         <Typography className={classes.info}>All : All the Todos for the particular user</Typography>
                         <Typography className={classes.info}>Active  : list of active todos in green color</Typography>
                         <Typography className={classes.info}>Inactive : list of inactive todos in red color </Typography>
                     </Grid>
-                    <Grid item xs>
+                    <Grid item xs={12} sm={8} md={4} lg={4}>
                         <Select
                             area-label="Users"
                             value={this.state.selectedOption}
@@ -79,7 +79,7 @@ class Radiofy extends Component {
                             options={userOptions}
                         />
                     </Grid>
-                    <Grid item xs>
+                    <Grid item xs={12} sm={8} md={4} lg={4}>
                        {this.state.show ? <div>
                                 <Typography>Number of {this.state.value} todos {this.state.filteredTodoList.length}</Typography>
                                 <RadioGroup

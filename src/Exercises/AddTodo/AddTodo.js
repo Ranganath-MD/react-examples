@@ -51,7 +51,7 @@ class AddTodo extends Component {
                 <Grid container spacing={3}>
                     <Grid item xs={1}>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} sm={8} md={4} lg={4}>
                         <Typography className={classes.title}>Add Todo </Typography>
                         <form onSubmit={this.handleSubmit}>
                             <Input
