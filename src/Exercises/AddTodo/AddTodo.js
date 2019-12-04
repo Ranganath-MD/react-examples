@@ -67,7 +67,6 @@ class AddTodo extends Component {
                                 }}
                                 />
                             <br/>
-
                             <Button
                                 type="submit"
                                 variant="contained"
