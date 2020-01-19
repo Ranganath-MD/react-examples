@@ -8,14 +8,15 @@ import PropTypes from 'prop-types';
 import { withStyles, withTheme} from '@material-ui/core/styles';
 import logo from "./logo.svg"
 import { Link, Route, Switch } from "react-router-dom"
+import { routes } from "./routes-config"
 
-import DropeeDown from "./Exercises/DropeeDown/DropeeDown"
-import Home from "./Home/Home"
-import DataOnCheck from "./Exercises/DataOnCheck/DataOnCheck"
-import Radiofy from "./Exercises/Radiofy/Radiofy"
-import AddTodo from "./Exercises/AddTodo/AddTodo"
-import EmojiList from "./Exercises/SearchEmoji/emojiList"
-import Form from "./Exercises/Form/Form"
+// import DropeeDown from "./Exercises/DropeeDown/DropeeDown"
+// import Home from "./Home/Home"
+// import DataOnCheck from "./Exercises/DataOnCheck/DataOnCheck"
+// import Radiofy from "./Exercises/Radiofy/Radiofy"
+// import AddTodo from "./Exercises/AddTodo/AddTodo"
+// import EmojiList from "./Exercises/SearchEmoji/emojiList"
+// import Form from "./Exercises/Form/Form"
 
 const drawerWidth = 240;
 
@@ -155,6 +156,7 @@ class Navigation extends React.Component{
         <Link to="/add-todo" className="menulink"><ListItem key={4} button>Add Todos</ListItem></Link>
         <Link to="/emoji-list" className="menulink"><ListItem key={5} button>Search an Emoji</ListItem></Link>
         <Link to="/form-submission" className="menulink"><ListItem key={6} button>Form submission</ListItem></Link>
+        <Link to="/select-checkbox" className="menulink"><ListItem key={7} button>Select All Checkboxes</ListItem></Link>
         </List>
       </Drawer>
       <main
@@ -163,13 +165,11 @@ class Navigation extends React.Component{
         })}
       >
       <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/dropee-down" component={DropeeDown} exact />
-        <Route path="/get-data-on-check" component={DataOnCheck} exact />
-        <Route path="/get-data-on-radio-check" component={Radiofy} exact />
-        <Route path="/add-todo" component={AddTodo} exact />
-        <Route path="/emoji-list" component={EmojiList} exact />
-        <Route path="/form-submission" component={Form} exact />
+        {
+          routes.map((route, index) => (
+            <Route key={index} path={route.path} component={route.component} exact={route.exact}/>
+          ))
+        }
       </Switch>
       </main>
     </div>
