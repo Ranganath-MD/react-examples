@@ -2,7 +2,7 @@ import React from "react";
 import SaveIcon from '@material-ui/icons/Save';
 import { green } from '@material-ui/core/colors';
 
-const Checkbox = ({ label, isSelected, onCheckboxChange, selected, save }) => (
+const Checkbox = ({ label, isSelected, onCheckboxChange, save }) => (
   <div className="form-check">
     <label className="label">
       <input

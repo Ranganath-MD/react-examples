@@ -34,7 +34,7 @@ class TodoList extends Component {
                     todos.length === 0 ? <span className={classes.emptyText}>No todo list yet, Add todos</span> :
                     todos.map(todo => {
                             return (
-                                <List >
+                                <List key={todo.todo}>
                                     <ListItem>{todo.todo}</ListItem>
                                 </List>
                             )

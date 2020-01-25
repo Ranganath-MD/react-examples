@@ -65,6 +65,7 @@ class SelectAll extends Component {
     event.preventDefault();
     var selected = Object.keys(this.state.checkboxes)
       .filter(checkbox => this.state.checkboxes[checkbox])
+      console.log(selected)
     this.setState({ save: true })
   };
 
@@ -75,7 +76,6 @@ class SelectAll extends Component {
             isSelected={this.state.checkboxes[option]}
             onCheckboxChange={this.handleCheckboxChange}
             key={option}
-            selected={this.state.selected}
             save={this.state.save}
         />
       )
