@@ -6,6 +6,7 @@ import AddTodo from "./Exercises/AddTodo/AddTodo"
 import EmojiList from "./Exercises/SearchEmoji/emojiList"
 import Form from "./Exercises/Form/Form"
 import SelectAll from "./Exercises/SelectAll/selectAll"
+
 export const routes = [
     {
         path : "/",
